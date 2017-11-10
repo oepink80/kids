@@ -1,0 +1,13 @@
+mixin header(spec)
+  +b.top-menu-container
+    +b.topmenu
+      +b.left-menu
+        +e.top-menu-item: a(href="/") Главная
+        +e.top-menu-item.active: a(href="//populyarnye-igry.html") Лучшее
+        +e.top-menu-item: a(href="/dlya-roditelej.html") Родителям
+      +b.logo-container
+        +e.a(href="/") игры</br>&nbsp&nbsp&nbsp&nbsp&nbsp&nbspдеткам
+      +b.right-menu
+        +e.top-menu-item: a(href="/nash-opros.html") Наш опрос
+        +e.top-menu-item: a(href="/blog.html") Блог
+            +e.top-menu-item: a(href="/kontakty.html") Контакты 
