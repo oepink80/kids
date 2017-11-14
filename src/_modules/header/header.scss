@@ -1,4 +1,21 @@
 // header styles
 header{
   margin-bottom: 20px;
+
+}
+.top-menu-container{
+  position: relative;
+  z-index: 10;
+  width: 100%;
+  @include flex(row, nowrap);
+  .topmenu{
+    @include flex(row, nowrap);
+    margin: auto;
+    .left-menu{
+      @include flex(row, nowrap);
+    }
+    .right-menu{
+      @include flex(row, nowrap);
+    }
+  }
 }

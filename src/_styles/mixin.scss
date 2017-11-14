@@ -1,0 +1,5 @@
+//mixin
+@mixin flex($row, $wrap){
+    display: inline-flex;
+    flex-flow: $row $wrap;
+}

@@ -1,1 +1,139 @@
+a:hover{
+    text-decoration: none;
+    opacity: 1;
+  }
 // form styles
+.parallax-container{
+    z-index: 3;
+    @include flex(column, nowrap);
+    height: 105vh;
+    position: absolute;
+    width:110%;
+    top: -5%;
+    left: -10%;
+    align-items: center;
+    overflow: hidden;
+    .bg{
+        //background: #e5d1b3;
+        @include flex(column, nowrap);
+        align-items: center;
+        height: 100vh;
+        //width: 100%;
+        &__bg-item{
+            margin: auto;
+            width: 110%;
+            //top: unset !important;
+            img{
+                width: 100%;
+            }
+        }
+        #bg0{
+            top: -18vh !important;
+        }
+        #bg1{
+            top: 4vh !important;
+        }
+        #bg2{
+            top: 31vh !important;
+        }
+        #bg3{
+            top: 35vh !important;
+        }
+        #bg4{
+            top: 60vh !important;
+        }
+        #bg5{
+            top: 60vh !important;
+        }
+        #bg6{
+            top: 70vh !important;
+            left: 20vw !important;
+            a{
+                color: blue;
+            }
+        }
+        #bg7{
+            top: 60vh !important;
+            left: 70vw !important;
+            a{
+            color: yellow;
+            }
+        }
+    }
+    .game-category{
+        max-width: 200px;
+        margin: auto;
+        position: relative;
+        z-index: 9;
+        @include flex(column, nowrap);
+        align-items: center;
+        /*hover*/
+
+        &:hover {
+            opacity: 1;
+            -webkit-animation: flash 1.5s;
+            animation: flash 1.5s;
+        }
+        @-webkit-keyframes flash {
+            0% {
+                opacity: .4;
+            }
+            100% {
+                opacity: 1;
+            }
+        }
+        @keyframes flash {
+            0% {
+                opacity: .4;
+            }
+            100% {
+                opacity: 1;
+            }
+        }
+        /*end hover*/
+        &::after{
+          content: "";
+          z-index: 1;
+          display: block;
+          background-image: url("/images/png/after.png");
+          background-size: contain;
+          width: 100%;;
+          height: 66px;
+          position: relative;
+          background-repeat: no-repeat;
+          top: -70px;
+          background-position: 50% 100%;
+        }
+        a{
+            @include flex(column, nowrap);
+            position: relative;
+            z-index: 11;
+            &:hover{
+                color: $white;
+            }
+        }
+        &__game-category-image{
+            @include flex(column, nowrap);
+            img{
+            position: relative;
+            max-width: 10vw;
+            width: 100%;
+            z-index: 2;
+            margin: auto;
+            }
+        }
+        &__game-category-name{
+            position: relative;
+            width: 100%;
+            z-index: 2;
+            margin: auto;
+            font-family: 'Smeshariki';
+            text-align: center;
+            font-size: 2vw;
+            white-space: nowrap;
+            @include media-breakpoint-down(sm) {
+                font-size: 3vw
+            }
+        }
+    }
+}

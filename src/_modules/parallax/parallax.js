@@ -1,5 +1,5 @@
 'use strict';
-import Parallax from 'parallax-js'
+import Parallax from 'parallax-js';
 
 export default class Parallaxmodule {
   constructor() {

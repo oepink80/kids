@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+	<head>
+		<meta charset="utf-8"/>
+		<meta http-equiv="X-UA-Compatible" content="IE=Edge"/>
+		<script src="https://rawgit.com/jonathantneal/svg4everybody/master/dist/svg4everybody.js"></script>
+		<script>svg4everybody();</script>
+		<title>SVG &lt;symbol&gt; sprite preview | svg-sprite</title>
+		<style>@charset "UTF-8";body{padding:0;margin:0;color:#666;background:#fafafa;font-family:Arial,Helvetica,sans-serif;font-size:1em;line-height:1.4}header{display:block;padding:3em 3em 2em 3em;background-color:#fff}header p{margin:2em 0 0 0}section{border-top:1px solid #eee;padding:2em 3em 0 3em}section ul{margin:0;padding:0}section li{display:inline;display:inline-block;background-color:#fff;position:relative;margin:0 2em 2em 0;vertical-align:top;border:1px solid #ccc;padding:1em 1em 3em 1em;cursor:default}.icon-box{margin:0;width:144px;height:144px;position:relative;background:#ccc url("data:image/gif;base64,R0lGODlhDAAMAIAAAMzMzP///yH/C1hNUCBEYXRhWE1QPD94cGFja2V0IGJlZ2luPSLvu78iIGlkPSJXNU0wTXBDZWhpSHpyZVN6TlRjemtjOWQiPz4gPHg6eG1wbWV0YSB4bWxuczp4PSJhZG9iZTpuczptZXRhLyIgeDp4bXB0az0iQWRvYmUgWE1QIENvcmUgNS4wLWMwNjEgNjQuMTQwOTQ5LCAyMDEwLzEyLzA3LTEwOjU3OjAxICAgICAgICAiPiA8cmRmOlJERiB4bWxuczpyZGY9Imh0dHA6Ly93d3cudzMub3JnLzE5OTkvMDIvMjItcmRmLXN5bnRheC1ucyMiPiA8cmRmOkRlc2NyaXB0aW9uIHJkZjphYm91dD0iIiB4bWxuczp4bXA9Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC8iIHhtbG5zOnhtcE1NPSJodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAvbW0vIiB4bWxuczpzdFJlZj0iaHR0cDovL25zLmFkb2JlLmNvbS94YXAvMS4wL3NUeXBlL1Jlc291cmNlUmVmIyIgeG1wOkNyZWF0b3JUb29sPSJBZG9iZSBQaG90b3Nob3AgQ1M1LjEgV2luZG93cyIgeG1wTU06SW5zdGFuY2VJRD0ieG1wLmlpZDozQjk4OTI0MUY5NTIxMUUyQkJDMEI5NEFEM0Y1QTYwQyIgeG1wTU06RG9jdW1lbnRJRD0ieG1wLmRpZDozQjk4OTI0MkY5NTIxMUUyQkJDMEI5NEFEM0Y1QTYwQyI+IDx4bXBNTTpEZXJpdmVkRnJvbSBzdFJlZjppbnN0YW5jZUlEPSJ4bXAuaWlkOjNCOTg5MjNGRjk1MjExRTJCQkMwQjk0QUQzRjVBNjBDIiBzdFJlZjpkb2N1bWVudElEPSJ4bXAuZGlkOjNCOTg5MjQwRjk1MjExRTJCQkMwQjk0QUQzRjVBNjBDIi8+IDwvcmRmOkRlc2NyaXB0aW9uPiA8L3JkZjpSREY+IDwveDp4bXBtZXRhPiA8P3hwYWNrZXQgZW5kPSJyIj8+Af/+/fz7+vn49/b19PPy8fDv7u3s6+rp6Ofm5eTj4uHg397d3Nva2djX1tXU09LR0M/OzczLysnIx8bFxMPCwcC/vr28u7q5uLe2tbSzsrGwr66trKuqqainpqWko6KhoJ+enZybmpmYl5aVlJOSkZCPjo2Mi4qJiIeGhYSDgoGAf359fHt6eXh3dnV0c3JxcG9ubWxramloZ2ZlZGNiYWBfXl1cW1pZWFdWVVRTUlFQT05NTEtKSUhHRkVEQ0JBQD8+PTw7Ojk4NzY1NDMyMTAvLi0sKyopKCcmJSQjIiEgHx4dHBsaGRgXFhUUExIREA8ODQwLCgkIBwYFBAMCAQAAIfkEAAAAAAAsAAAAAAwADAAAAhaEH6mHmmzcgzJAUG/NVGrfOZ8YLlABADs=") top left repeat;border:1px solid #ccc;display:table-cell;vertical-align:middle;text-align:center}.icon{display:inline;display:inline-block}h1{margin-top:0}h2{margin:0;padding:0;font-size:1em;font-weight:normal;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;position:absolute;left:1em;right:1em;bottom:1em}footer{display:block;margin:0;padding:0 3em 3em 3em}footer p{margin:0;font-size:.7em}footer a{color:#0f7595;margin-left:0}</style>
+		
+<!--
+	
+Sprite shape dimensions
+====================================================================================================
+You will need to set the sprite shape dimensions via CSS when you use them as inline SVG, otherwise
+they would become a huge 100% in size. You may use the following dimension classes for doing so.
+They might well be outsourced to an external stylesheet of course.
+
+-->
+
+<style type="text/css">
+	.svg-bg0-dims { width: 614.4px; height: 201.38px; }
+	.svg-bg1-dims { width: 614.4px; height: 137.235px; }
+	.svg-bg2-dims { width: 380.054px; height: 71.313px; }
+	.svg-bg3-dims { width: 316.75px; height: 72.039px; }
+	.svg-bg4-dims { width: 289.138px; height: 30.347px; }
+	.svg-bg5-dims { width: 614.453px; height: 175.91px; }
+</style>
+<!--
+====================================================================================================
+-->
+
+	</head>
+	<body>
+	
+<!--
+	
+Inline <symbol> SVG sprite
+====================================================================================================
+This is an inlined version of the generated SVG sprite. The single images may be <use>d everywhere
+below within this document. Please see
+
+	https://github.com/jkphl/svg-sprite/blob/master/docs/configuration.md#defs--symbol-mode
+
+for further details on how to create this embeddable sprite variant.
+
+-->
+
+<svg width="0" height="0" style="position:absolute">
+		<symbol viewBox="0 0 16256 5328" shape-rendering="geometricPrecision" text-rendering="geometricPrecision" image-rendering="optimizeQuality" fill-rule="evenodd" clip-rule="evenodd" id="bg0" xmlns="http://www.w3.org/2000/svg"><defs><style>.afil0{fill:url(#aid0);fill-rule:nonzero}</style><linearGradient id="aid0" gradientUnits="userSpaceOnUse" x1="8090.85" y1="5353.91" x2="8165.16" y2="-25.74"><stop offset="0" stop-color="#fff"/><stop offset=".651" stop-color="#9fd6f1"/><stop offset="1" stop-color="#3face2"/></linearGradient></defs><g id="aСлой_x0020_1"><path class="afil0" d="M0 5328c1014-352 2716-787 5022-831 935-18 1888 34 2867 115 2216-1164 3580-1537 5390-1731 1049-113 2142-83 2978-24V-1H1v5328z" id="a_1008463904"/></g></symbol>
+		<symbol viewBox="0 0 16256 3631" shape-rendering="geometricPrecision" text-rendering="geometricPrecision" image-rendering="optimizeQuality" fill-rule="evenodd" clip-rule="evenodd" id="bg1" xmlns="http://www.w3.org/2000/svg"><defs><style>.bfil0,.bfil1,.bfil2{fill:#4ac7ec;fill-rule:nonzero;fill-opacity:.101961}.bfil0,.bfil2{fill-opacity:.180392}.bfil2{fill:#fff;fill-opacity:.611765}</style></defs><g id="bСлой_x0020_1"><path class="bfil0" d="M15223 884s0-116 136-163c136-48 259 56 259 56s84-74 179-27c0 0 132-237 443-181 6 1 11 2 16 3v752c-51 11-113 17-188 16-339-3-427-145-427-145s-215 116-323-42c0 0-219 77-279-83-61-164 183-187 183-187z"/><path class="bfil1" d="M3603 2320s-15-130 140-198c155-67 317 38 317 38s90-92 210-48c0 0 126-281 504-248 378 32 362 307 362 307s299-69 387 103c87 172-135 322-376 275 0 0-71 171-476 202s-528-121-528-121-242 152-391-15c0 0-251 109-344-66-94-179 194-229 194-229z"/><g id="b_1096006368"><path class="bfil2" d="M10494 1604s16-265 345-299c329-33 400 219 400 219s149-159 345-66c141 66 71 259 71 259s299-112 431 73c114 160-219 352-462 259 0 0-14 139-267 150-274 12-361-93-361-93s-93 140-336 133-348-221-348-221-403 80-452-95c-29-107 125-199 267-139 0 0-31-193 110-246s259 66 259 66zM0 2382c337-27 464 233 464 233s154-234 434-149c201 61 157 326 157 326s362-200 581 18c190 188-198 499-539 421 0 0 16 185-310 245-355 65-494-56-494-56s-66 151-293 213V2384zM7175 247s-20-146-157-247h-624c-108 86-131 200-131 200s-195-182-425-57c-165 90-61 319-61 319s-373-116-516 118c-124 202 300 412 586 283 0 0 31 168 338 165 334-4 429-137 429-137s126 163 421 139c294-25 402-292 402-292s497 70 540-146c26-132-171-233-337-151 0 0 20-236-156-291s-308 98-308 98z"/></g><path class="bfil2" d="M2145 130s-8-57-44-130H1009c-19 42-24 71-24 71S946 34 880 0H440c-206 116-75 405-75 405S182 349 0 376v561c143 41 312 42 453-22 0 0 39 214 430 210 426-5 546-175 546-175s161 208 536 177 512-373 512-373 634 89 688-186c33-168-218-297-429-193 0 0 25-301-199-370-6-2-12-3-17-5h-163c-128 32-212 130-212 130zM13564 12s0-4-1-12h-1822c-11 105 28 206 28 206s-466-168-666 121c-174 250 349 541 723 393 0 0 26 216 417 229 426 14 557-150 557-150s148 215 524 200c376-14 534-349 534-349s627 117 698-155c43-166-199-307-416-212 0 0 24-166-54-283h-509c-8 7-12 12-12 12zM8381 1707s-48-173-326-45c-176 82-42 193-42 193s-209 78-60 205c149 126 304-41 304-41s362 147 480 3c118-143 13-350-356-314z"/></g></symbol>
+		<symbol viewBox="0 0 6220 1167" shape-rendering="geometricPrecision" text-rendering="geometricPrecision" image-rendering="optimizeQuality" fill-rule="evenodd" clip-rule="evenodd" id="bg2" xmlns="http://www.w3.org/2000/svg"><defs><style>.cfil0{fill:#aedabe;fill-rule:nonzero}</style></defs><g id="cСлой_x0020_1"><path class="cfil0" d="M4692 44C3438 216 2603 701 1437 582 556 492 243 440 1 428v739c627-218 1680-487 3106-514 579-11 1168 21 1774 71 505-265 938-464 1340-615-622-98-887-153-1528-65z" id="c_947728320"/></g></symbol>
+		<symbol viewBox="0 0 139130 31643" shape-rendering="geometricPrecision" text-rendering="geometricPrecision" image-rendering="optimizeQuality" fill-rule="evenodd" clip-rule="evenodd" id="bg3" xmlns="http://www.w3.org/2000/svg"><defs><style>.dstr0{stroke:#7c973b;stroke-width:126.502}.dfil1{fill:none}.dfil0,.dfil1,.dfil2{fill-rule:nonzero}.dfil2{fill-opacity:.211765;fill:#eceb7a}.dfil0{fill:url(#did0)}</style><radialGradient id="did0" cy="34%" fx="50%" fy="34%"><stop offset="0" stop-color="#dddf52"/><stop offset=".251" stop-color="#ced737"/><stop offset=".549" stop-color="#bfd018"/><stop offset=".612" stop-color="#bfd018"/><stop offset="1" stop-color="#abbe26"/></radialGradient></defs><g id="dСлой_x0020_1"><path class="dfil0" d="M89695 1328C59651 4553 37008 10742 222 30067c3942 327 7913 682 11911 1059 27603 1026 41319 369 78552-2555 14024-1102 33173-2070 48442-2749V935c-13871-978-32014-1477-49431 393z"/><path class="dfil1 dstr0" d="M89695 1328C59651 4553 37008 10742 222 30067c3942 327 7913 682 11911 1059 27603 1026 41319 369 78552-2555 14024-1102 33173-2070 48442-2749m0-24887c-13871-978-32014-1477-49431 393"/><path class="dfil2" d="M124870 1593s-57562-385-82388 11466-3758 12158 65523 1681c41614-6294 34640-12574 16865-13147z"/></g></symbol>
+		<symbol viewBox="0 0 61212 6424" shape-rendering="geometricPrecision" text-rendering="geometricPrecision" image-rendering="optimizeQuality" fill-rule="evenodd" clip-rule="evenodd" id="bg4" xmlns="http://www.w3.org/2000/svg"><defs><style>.estr0{stroke:#7c973b;stroke-width:60.9705}.efil1,.efil4,.efil5{fill:none;fill-rule:nonzero}.efil4,.efil5{fill:#f7e893}.efil4{fill:#faad1d}.efil2{fill:#eceb7a;fill-opacity:.211765}.efil0,.efil2,.efil3{fill-rule:nonzero}.efil3{fill-opacity:.54902;fill:#64903f}.efil0{fill:url(#eid0)}</style><radialGradient id="eid0" cx="70%" cy="-3.001%" fx="70%" fy="-3.001%"><stop offset="0" stop-color="#dddf52"/><stop offset=".439" stop-color="#bfd018"/><stop offset="1" stop-color="#bfd018"/></radialGradient></defs><g id="eСлой_x0020_1"><path class="efil0" d="M37863 1356C19918 2766 13307 3082 3 2588c18690 1756 38719 4384 61207 3696V31c-7359 327-16588 794-23348 1325z"/><path class="efil1 estr0" d="M37863 1356C19918 2766 13307 3082 3 2588c18690 1756 38719 4384 61207 3696m0-6253c-7359 327-16588 794-23348 1325"/><path class="efil2" d="M61210 1000c-4520 184-20527 848-29071 1365-10017 606-12403 2020 15741 1818 5631-41 10016-222 13330-479V1000z"/><g id="e_1082389184"><path class="efil3" d="M32071 2940s-462-208-127-328c337-121 464 237 464 237s418-323 799 1-403 193-403 193 478 93 107 258c-369 164-445-166-445-166s-9 345-400 294c-392-51-91-257-91-257s-370 135-426-108c-58-244 522-124 522-124z"/><path class="efil4" d="M32049 2825s-462-209-127-330c338-120 464 238 464 238s418-324 798 0c381 325-403 194-403 194s478 93 107 257c-369 165-445-164-445-164s-9 345-401 293c-391-52-90-258-90-258s-371 136-427-108c-56-243 523-123 523-123z"/><path class="efil5" d="M32611 2888c1 48-101 88-228 90-126 1-230-35-231-82-1-48 101-88 227-90s229 35 231 83z"/><g><path class="efil3" d="M37783 2152s-716-243-246-464c470-222 723 285 723 285s550-529 1168-104c618 424-554 336-554 336s716 72 205 362c-510 290-682-182-682-182s51 506-531 484c-582-23-181-364-181-364s-517 247-645-101c-128-349 742-251 742-251z"/><path class="efil4" d="M37729 1986s-716-243-246-464c471-221 723 286 723 286s550-529 1168-105-554 337-554 337 716 73 206 362c-511 290-683-182-683-182s50 506-532 483c-583-22-181-364-181-364s-517 248-644-102c-129-348 742-250 742-250z"/><path class="efil5" d="M38563 2004c10 69-130 141-316 162-184 19-342-21-353-90-10-69 130-142 315-161 185-21 343 19 354 90z"/></g></g></g></symbol>
+		<symbol viewBox="0 0 16256 4654" shape-rendering="geometricPrecision" text-rendering="geometricPrecision" image-rendering="optimizeQuality" fill-rule="evenodd" clip-rule="evenodd" id="bg5" xmlns="http://www.w3.org/2000/svg"><defs><style>.fstr0{stroke:#7c973b;stroke-width:7.61947}.ffil1,.ffil10,.ffil9{fill:none;fill-rule:nonzero}.ffil10,.ffil9{fill:#f7e893}.ffil9{fill:#faad1d}.ffil3,.ffil4,.ffil5{fill:#eceb7a;fill-rule:nonzero;fill-opacity:.160784}.ffil3,.ffil4{fill-opacity:.211765}.ffil4{fill-opacity:.239216}.ffil6,.ffil7,.ffil8{fill:#64903f;fill-rule:nonzero;fill-opacity:.54902}.ffil6,.ffil7{fill-opacity:.580392}.ffil7{fill:#aedabe}.ffil0,.ffil2{fill:url(#fid0);fill-rule:nonzero}.ffil2{fill:url(#fid1);fill-opacity:.188235}</style><radialGradient id="fid0" cy="49%" fx="50%" fy="49%"><stop offset="0" stop-color="#dddf52"/><stop offset=".251" stop-color="#ced737"/><stop offset=".561" stop-color="#bfd018"/><stop offset=".62" stop-color="#bfd018"/><stop offset="1" stop-color="#a9bd27"/></radialGradient><radialGradient id="fid1" cx="150%" cy="150%" fx="150%" fy="150%"><stop offset="0" stop-color="#b0c325"/><stop offset=".82" stop-color="#99af2d"/><stop offset="1" stop-color="#99af2d"/></radialGradient></defs><g id="fСлой_x0020_1"><path class="ffil0" d="M5022 7C2716 52 1015 486 1 838v3816h16255V648C11960 779 8382-58 5022 7z"/><path class="ffil1 fstr0" d="M5022 7C2716 52 1015 486 1 838m16255-190C11960 779 8382-58 5022 7"/><path class="ffil2" d="M107 3600c2639-556 1904-587 587-721-243-25-477-45-692-67v811c35-8 70-15 105-23z" id="f_1094612736"/><path class="ffil3" d="M486 4654c17-10 33-20 51-30 232-133-33-153-536-96v126h484zm7611 0c-220-11-490-12-808 0h808z"/><path class="ffil4" d="M16256 872c-1169 24-2945 67-4930-151 0 0-5335-720-8346-305-3010 415-4766 1409 956 1769 0 0 3910 186 8092 33 1937-71 3344-350 4227-591V873z"/><path class="ffil5" d="M15395 4577c57 26 113 52 168 77h693V2919c-1403 273-2750 787-861 1658z"/><g id="f_989856592"><path class="ffil6" d="M9600 4640l88-224 15 226zM9205 4654l83-212 14 212zM1386 4019l87-224 15 226zM986 4045l87-224 15 226z"/><path class="ffil7" d="M1010 4654l1-4 1 4z"/></g><g id="f_989855712"><path class="ffil8" d="M13680 1999s-90-40-25-64c65-23 90 46 90 46s81-63 155 0-78 37-78 37 93 18 21 50-86-32-86-32-2 67-78 57-18-50-18-50-72 26-83-21 101-24 101-24z"/><path class="ffil9" d="M13676 1976s-90-40-24-64c65-23 90 46 90 46s81-63 155 0-78 37-78 37 92 18 21 50-86-32-86-32-2 67-78 57-17-50-17-50-72 26-83-21 101-24 101-24z"/><path class="ffil10" d="M13785 1988c0 9-19 17-44 17-24 0-44-7-45-16 0-9 19-17 44-17s45 7 45 16z"/><g><path class="ffil8" d="M14787 1846s-139-47-48-90 140 55 140 55 107-102 226-20c120 82-107 65-107 65s139 14 40 70-132-35-132-35 10 98-103 94-35-71-35-71-100 48-125-20 144-49 144-49z"/><path class="ffil9" d="M14777 1814s-139-47-48-90 140 55 140 55 107-103 226-20c120 82-107 65-107 65s139 14 40 70-132-35-132-35 10 98-103 94-35-71-35-71-100 48-125-20 144-48 144-48z"/><path class="ffil10" d="M14938 1817c2 14-25 28-61 31-36 4-66-4-68-17-2-14 25-28 61-31 36-4 66 4 69 17z"/></g></g><g id="f_1086646096"><path class="ffil8" d="M1887 873s-90-40-24-64c65-23 90 46 90 46s81-63 155 0-78 38-78 38 92 18 21 50c-72 32-86-32-86-32s-2 67-78 57-18-50-18-50-72 26-83-21 101-24 101-24z"/><path class="ffil9" d="M1883 851s-90-40-24-64c65-23 90 46 90 46s81-63 155 0-78 37-78 37 92 18 21 50c-72 32-86-32-86-32s-2 67-78 57-17-50-17-50-72 26-83-21 101-24 101-24z"/><path class="ffil10" d="M1992 863c0 9-19 17-44 17-24 0-44-7-45-16 0-9 19-17 44-17 24 0 44 7 45 16z"/><g><path class="ffil8" d="M2994 720s-139-47-48-90 140 55 140 55 107-102 226-20c120 82-107 65-107 65s139 14 40 70-132-35-132-35 10 98-103 94-35-71-35-71-100 48-125-20 144-49 144-49z"/><path class="ffil9" d="M2984 688s-139-47-48-90 140 55 140 55 107-102 226-20c120 82-107 65-107 65s139 14 40 70-132-35-132-35 10 98-103 94-35-71-35-71-100 48-125-20 144-49 144-49z"/><path class="ffil10" d="M3145 691c2 13-25 28-61 31-36 4-66-4-68-17s25-28 61-31c36-4 66 4 69 17z"/></g></g><g id="f_1018823328"><path class="ffil8" d="M7739 3106s-65-34-14-49 65 39 65 39 65-43 116 7c52 51-61 25-61 25s69 18 13 38c-56 21-63-28-63-28s-5 50-62 39c-56-11-10-38-10-38s-56 17-61-19 78-13 78-13z"/><path class="ffil9" d="M7737 3089s-65-34-14-49 65 39 65 39 65-43 116 7c51 51-61 25-61 25s68 18 12 38c-56 21-63-28-63-28s-5 50-62 39c-56-11-10-38-10-38s-56 17-61-20c-5-36 78-13 78-13z"/><path class="ffil10" d="M7818 3104c0 7-16 12-34 11s-33-7-33-14 16-12 34-11 33 7 33 14z"/><g><path class="ffil8" d="M8582 3042s-101-42-30-70 102 48 102 48 87-72 172-5-85 44-85 44 104 17 26 55-97-33-97-33 1 74-84 66-22-55-22-55-78 32-93-20c-14-52 111-30 111-30z"/><path class="ffil9" d="M8576 3017s-101-42-30-70 102 48 102 48 87-72 172-5-85 44-85 44 104 17 26 55-97-33-97-33 1 74-83 66c-85-8-22-55-22-55s-78 32-93-20c-14-52 111-30 111-30z"/><path class="ffil10" d="M8697 3027c1 10-21 20-48 21s-50-6-50-16c-1-10 21-20 48-21s50 6 50 16z"/></g></g><g id="f_1009170368"><path class="ffil8" d="M454 2367s-74-43-14-58 74 48 74 48 78-48 136 13-73 27-73 27 79 23 13 45c-67 22-72-35-72-35s-9 59-75 44c-65-15-10-45-10-45s-66 17-70-25 92-13 92-13z"/><path class="ffil9" d="M453 2347s-74-43-14-58 74 48 74 48 78-48 136 13-73 27-73 27 79 23 13 46c-66 22-72-35-72-35s-9 59-75 44c-65-15-10-45-10-45s-66 17-70-25 92-13 92-13z"/><path class="ffil10" d="M547 2366c-1 8-19 13-41 12-22-2-38-10-37-18s19-13 41-12c22 2 38 10 37 18z"/><g><path class="ffil8" d="M1444 2323s-117-53-32-83 117 60 117 60 105-81 201 1-102 49-102 49 120 24 27 65-112-42-112-42-2 87-101 74-23-65-23-65-93 34-107-27 132-31 132-31z"/><path class="ffil9" d="M1439 2294s-117-53-32-83 117 60 117 60 105-81 201 1-102 49-102 49 120 24 27 65-112-42-112-42-3 87-101 74c-99-13-23-65-23-65s-94 34-108-27 132-31 132-31z"/><path class="ffil10" d="M1580 2310c0 12-25 22-57 23-32 0-58-9-58-21s25-22 57-23c32 0 58 9 58 21z"/></g></g></g></symbol>
+</svg>
+
+<!--
+====================================================================================================
+-->
+		
+		<header>
+			<h1>SVG <code>&lt;symbol&gt;</code> sprite preview</h1>
+			<p>This preview features two methods of using the generated sprite in conjunction with inline SVG. Please have a look at the HTML source for further details and be aware of the following constraints:</p>
+			<ul>
+				<li>Your browser has to <a href="http://caniuse.com/#feat=svg-html5" target="_blank">support inline SVG</a> for these techniques to work.</li>
+				<li>The embedded sprite (A) slightly differs from the generated external one. Please <a href="https://github.com/jkphl/svg-sprite/blob/master/docs/configuration.md#defs--symbol-mode" target="_blank">see the documentation</a> for details on how to create such an embeddable sprite.</li>
+				<li>Internet Explorer up to version 11 doesn't support external sprites for use with inline SVG. For IE 9-11, you may polyfill this functionality with <a href="https://github.com/jonathantneal/svg4everybody" target="_blank">SVG for Everybody</a>.</li>
+			</ul>
+		</header>
+		<section>
+
+<!--
+	
+A) Inline SVG with embedded sprite
+====================================================================================================
+These SVG images make use of fragment identifiers (IDs) and are extracted out of the inline sprite
+embedded above. They may be styled via CSS.
+
+-->
+
+			<h3>A) Inline SVG with embedded sprite</h3>
+			<ul>
+
+				<li title="bg0">
+					<div class="icon-box">
+						
+						<!-- bg0 -->
+						<svg class="svg-bg0-dims">
+							<use xlink:href="#bg0"></use>
+						</svg>
+						
+					</div>
+					<h2>bg0</h2>
+				</li>
+				<li title="bg1">
+					<div class="icon-box">
+						
+						<!-- bg1 -->
+						<svg class="svg-bg1-dims">
+							<use xlink:href="#bg1"></use>
+						</svg>
+						
+					</div>
+					<h2>bg1</h2>
+				</li>
+				<li title="bg2">
+					<div class="icon-box">
+						
+						<!-- bg2 -->
+						<svg class="svg-bg2-dims">
+							<use xlink:href="#bg2"></use>
+						</svg>
+						
+					</div>
+					<h2>bg2</h2>
+				</li>
+				<li title="bg3">
+					<div class="icon-box">
+						
+						<!-- bg3 -->
+						<svg class="svg-bg3-dims">
+							<use xlink:href="#bg3"></use>
+						</svg>
+						
+					</div>
+					<h2>bg3</h2>
+				</li>
+				<li title="bg4">
+					<div class="icon-box">
+						
+						<!-- bg4 -->
+						<svg class="svg-bg4-dims">
+							<use xlink:href="#bg4"></use>
+						</svg>
+						
+					</div>
+					<h2>bg4</h2>
+				</li>
+				<li title="bg5">
+					<div class="icon-box">
+						
+						<!-- bg5 -->
+						<svg class="svg-bg5-dims">
+							<use xlink:href="#bg5"></use>
+						</svg>
+						
+					</div>
+					<h2>bg5</h2>
+				</li>
+			</ul>
+
+<!--
+====================================================================================================
+-->
+
+		</section>
+		<section>
+
+<!--
+	
+B) Inline SVG with external sprite (IE 9-11 with polyfill only)
+====================================================================================================
+These SVG images make use of an URL + fragment identifiers (IDs) and refer to the regular external
+SVG sprite. They may be styled via CSS. (IE 9-11 with polyfill only)
+
+-->
+
+			<h3>B) Inline SVG with external sprite (IE 9-11 with polyfill only)</h3>
+			<ul>
+				
+				<li title="bg0">
+					<div class="icon-box">
+						
+						<!-- bg0 -->
+						<svg class="svg-bg0-dims">
+							<use xlink:href="svg/sprite.symbol.svg#bg0"></use>
+						</svg>
+						
+					</div>
+					<h2>bg0</h2>
+				</li>
+				<li title="bg1">
+					<div class="icon-box">
+						
+						<!-- bg1 -->
+						<svg class="svg-bg1-dims">
+							<use xlink:href="svg/sprite.symbol.svg#bg1"></use>
+						</svg>
+						
+					</div>
+					<h2>bg1</h2>
+				</li>
+				<li title="bg2">
+					<div class="icon-box">
+						
+						<!-- bg2 -->
+						<svg class="svg-bg2-dims">
+							<use xlink:href="svg/sprite.symbol.svg#bg2"></use>
+						</svg>
+						
+					</div>
+					<h2>bg2</h2>
+				</li>
+				<li title="bg3">
+					<div class="icon-box">
+						
+						<!-- bg3 -->
+						<svg class="svg-bg3-dims">
+							<use xlink:href="svg/sprite.symbol.svg#bg3"></use>
+						</svg>
+						
+					</div>
+					<h2>bg3</h2>
+				</li>
+				<li title="bg4">
+					<div class="icon-box">
+						
+						<!-- bg4 -->
+						<svg class="svg-bg4-dims">
+							<use xlink:href="svg/sprite.symbol.svg#bg4"></use>
+						</svg>
+						
+					</div>
+					<h2>bg4</h2>
+				</li>
+				<li title="bg5">
+					<div class="icon-box">
+						
+						<!-- bg5 -->
+						<svg class="svg-bg5-dims">
+							<use xlink:href="svg/sprite.symbol.svg#bg5"></use>
+						</svg>
+						
+					</div>
+					<h2>bg5</h2>
+				</li>
+			</ul>
+
+<!--
+====================================================================================================
+-->
+
+		</section>
+		<footer>
+			<p>Generated at Tue, 14 Nov 2017 11:30:27 GMT by <a href="https://github.com/jkphl/svg-sprite" target="_blank">svg-sprite</a>.</p>
+		</footer>
+	</body>
+</html>

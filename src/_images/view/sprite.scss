@@ -1,0 +1,64 @@
+%svg-common {
+	background: url("svg/sprite.view.svg") no-repeat;
+}
+
+.svg-bg0 {
+	@extend %svg-common;
+	background-position: 0 45.73605116738599%;
+}
+
+.svg-bg0-dims {
+	width: 614.4px;
+	height: 201.38px;
+}
+
+.svg-bg1 {
+	@extend %svg-common;
+	background-position: 0 84.07295577863692%;
+}
+
+.svg-bg1-dims {
+	width: 614.4px;
+	height: 137.235px;
+}
+
+.svg-bg2 {
+	@extend %svg-common;
+	background-position: 0 99.9685245595867%;
+}
+
+.svg-bg2-dims {
+	width: 380.054px;
+	height: 71.313px;
+}
+
+.svg-bg3 {
+	@extend %svg-common;
+	background-position: 99.87045916294188% 0;
+}
+
+.svg-bg3-dims {
+	width: 316.75px;
+	height: 72.039px;
+}
+
+.svg-bg4 {
+	@extend %svg-common;
+	background-position: 95.58085561131314% 12.964745983554485%;
+}
+
+.svg-bg4-dims {
+	width: 289.138px;
+	height: 30.347px;
+}
+
+.svg-bg5 {
+	@extend %svg-common;
+	background-position: 0 0;
+}
+
+.svg-bg5-dims {
+	width: 614.453px;
+	height: 175.91px;
+}
+
